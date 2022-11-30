@@ -70,7 +70,7 @@ module "odf" {
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | -------- |
 | `ibmcloud_api_key`             | This requires an ibmcloud api key found here: `https://cloud.ibm.com/iam/apikeys`    |         | Yes       |
 | `cluster`                   | The id of the OpenShift cluster to be installed on |  | Yes       |
-| `roks_version`                   | ROKS Cluster version (4.7 or higher) |  | Yes       |
+| ~~`roks_version`~~                   | ~~ROKS Cluster version (4.7 or higher)~~ |  | ~~Yes~~|
 | `osdStorageClassName`                   | Storage class that you want to use for your OSD devices | ibmc-vpc-block-metro-3iops-tier | Yes       |
 | `osdSize`                   | Size of your storage devices. The total storage capacity of your ODF cluster is equivalent to the osdSize x 3 divided by the numOfOsd | 250Gi | Yes       |
 | `osdDevicePaths`                   | Please provide IDs of the disks to be used for OSD pods if using local disks or standard classic cluster |  | No   |

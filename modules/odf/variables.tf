@@ -8,10 +8,10 @@ variable "ibmcloud_api_key" {
   description = "IBM Cloud API key (https://cloud.ibm.com/docs/account?topic=account-userapikey#create_user_key)"
 }
 
-variable "roks_version" {
-  type = string
-  description = "ROKS Cluster version (4.7 or higher)"
-}
+# variable "roks_version" {
+#   type = string
+#   description = "ROKS Cluster version (4.7 or higher)"
+# }
 
 variable "osdStorageClassName" {
   description = "Storage class that you want to use for your OSD devices"
