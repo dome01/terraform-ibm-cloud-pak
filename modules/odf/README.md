@@ -5,7 +5,7 @@ This Terraform Module installs the **ODF Service** on an Openshift (ROKS) cluste
 A ROKS cluster is required with at least three worker nodes. Each worker node must have a minimum of 16 CPUs and 64 GB RAM. https://cloud.ibm.com/docs/openshift?topic=openshift-deploy-odf-vpc for more information.
 
 ### About the fork:
-- This terraform was originally created by [[https://github.com/annumberhocker|Ann Umberhocker]]
+- This terraform was originally created by [Ann Umberhocker](https://github.com/annumberhocker)
 - This fork fix the version of ODF to 4.10 due to the inconsistency found during deployment
 
 **Module Source**: `github.com/ibm-build-lab/terraform-ibm-cloud-pak.git//modules/odf`
