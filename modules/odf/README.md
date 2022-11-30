@@ -5,8 +5,8 @@ This Terraform Module installs the **ODF Service** on an Openshift (ROKS) cluste
 A ROKS cluster is required with at least three worker nodes. Each worker node must have a minimum of 16 CPUs and 64 GB RAM. https://cloud.ibm.com/docs/openshift?topic=openshift-deploy-odf-vpc for more information.
 
 ### About the fork:
-- This terraform was originally created by [Ann Umberhocker](https://github.com/annumberhocker)
-- This fork fix the version of ODF to 4.10 due to the inconsistency found during deployment
+- The orginal repo was created by [Ann Umberhocker](https://github.com/annumberhocker)
+- The fork fixes the version of ODF to 4.10 since 4.11 is not supported at the moment
 
 **Module Source**: `github.com/ibm-build-lab/terraform-ibm-cloud-pak.git//modules/odf`
 
@@ -71,7 +71,7 @@ module "odf" {
 | `ibmcloud_api_key`             | This requires an ibmcloud api key found here: `https://cloud.ibm.com/iam/apikeys`    |         | Yes       |
 | `cluster`                   | The id of the OpenShift cluster to be installed on |  | Yes       |
 | `roks_version`                   | ROKS Cluster version (4.7 or higher) |  | Yes       |
-| `osdStorageClassName`                   | Storage class that you want to use for your OSD devices | ibmc-vpc-block-metro-10iops-tier | Yes       |
+| `osdStorageClassName`                   | Storage class that you want to use for your OSD devices | ibmc-vpc-block-metro-3iops-tier | Yes       |
 | `osdSize`                   | Size of your storage devices. The total storage capacity of your ODF cluster is equivalent to the osdSize x 3 divided by the numOfOsd | 250Gi | Yes       |
 | `osdDevicePaths`                   | Please provide IDs of the disks to be used for OSD pods if using local disks or standard classic cluster |  | No   |
 | `numOfOsd`                   | Number object storage daemons (OSDs) that you want to create. ODF creates three times the numOfOsd value | 1 | Yes       |

@@ -1,4 +1,4 @@
-!/bin/sh
+# !/bin/sh
 
 ibmcloud config --check-version=false
 ibmcloud login -apikey ${IC_API_KEY} 

@@ -16,7 +16,7 @@ variable "roks_version" {
 variable "osdStorageClassName" {
   description = "Storage class that you want to use for your OSD devices"
   type = string
-  default = "ibmc-vpc-block-10iops-tier"
+  default = "ibmc-vpc-block-3iops-tier"
 }
 
 variable "osdSize" {
