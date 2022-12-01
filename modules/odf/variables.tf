@@ -16,7 +16,7 @@ variable "ibmcloud_api_key" {
 variable "osdStorageClassName" {
   description = "Storage class that you want to use for your OSD devices"
   type = string
-  default = "ibmc-vpc-block-3iops-tier"
+  default = "ibmc-vpc-block-general-purpose"
 }
 
 variable "osdSize" {
