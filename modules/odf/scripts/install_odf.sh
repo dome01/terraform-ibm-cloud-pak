@@ -8,9 +8,9 @@ ibmcloud ks cluster config -c ${CLUSTER} --admin
 # ROKS_VERSION=`kubectl get clusterversion -o jsonpath='{.items[].status.history[].version}{"\n"}'`
 # Round the number down to 0 (e.g. 4.7.40 to 4.7.0)
 # ROKS_VERSION="${ROKS_VERSION%.*}.0"
-ROKS_VERSION="4.10.0"
+ROKS_VERSION="4.11.0"
 
-ibmcloud ks cluster addon enable openshift-data-foundation -c ${CLUSTER} --version ${ROKS_VERSION} --param "odfDeploy=false"
+ibmcloud ks cluster addon enable openshift-data-foundation -c ${CLUSTER} --version ${ROKS_VERSION} -y --param "odfDeploy=true" 
 
 ibmcloud ks cluster addon ls -c ${CLUSTER} |  grep openshift-data-foundation | grep "Addon Ready"
 result=$?
